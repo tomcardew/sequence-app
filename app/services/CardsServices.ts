@@ -9,7 +9,6 @@ const CardsServices = {
       const response = await request.request();
       return response;
     } catch (error) {
-      console.warn(error);
       return null;
     }
   },

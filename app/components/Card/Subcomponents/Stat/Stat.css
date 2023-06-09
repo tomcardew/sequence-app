@@ -1,0 +1,17 @@
+#stat-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#stat-container img {
+  width: 20px;
+  height: 20px;
+}
+
+#stat-container span {
+  font-size: 14px;
+  font-weight: 700;
+  color: yellow;
+}

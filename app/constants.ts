@@ -8,6 +8,11 @@ import EffectIcon from "../assets/icons/effect.png";
 import UpgradeIcon from "../assets/icons/upgrade.png";
 import EnergyIcon from "../assets/icons/energy.png";
 import LoadingIcon from "../assets/icons/loading.png";
+import PreviousIcon from "../assets/icons/previous.png";
+import ForwardIcon from "../assets/icons/forward.png";
+
+import CardFront from "../assets/cards/front.png";
+import CardBack from "../assets/cards/back.png";
 
 const Icons = {
   back: BackIcon,
@@ -20,6 +25,13 @@ const Icons = {
   upgrade: UpgradeIcon,
   energy: EnergyIcon,
   loading: LoadingIcon,
+  previous: PreviousIcon,
+  forward: ForwardIcon,
+};
+
+const CardDefaults = {
+  back: CardBack,
+  front: CardFront,
 };
 
 interface NavigationProps {
@@ -40,6 +52,10 @@ const RouteNavigationOptions: { [key: string]: NavigationProps } = {
     hideBackButton: false,
     title: "Todas las cartas",
   },
+  "/decks": {
+    hideBackButton: false,
+    title: "Todos tus decks",
+  },
 };
 
-export { Icons, RouteNavigationOptions, NavigationProps };
+export { Icons, CardDefaults, RouteNavigationOptions, NavigationProps };

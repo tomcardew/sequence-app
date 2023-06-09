@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import './Navigation.css';
-import { Icons, RouteNavigationOptions } from '../../constants';
+import "./Navigation.css";
+import { Icons, RouteNavigationOptions } from "../../constants";
 
 export default function Navigation() {
   const navigate = useNavigate();

@@ -1,0 +1,28 @@
+#cards-list-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#cards-list-container .cards-list-content {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* Adjust the number of columns as needed */
+  grid-gap: 20px; /* Adjust the gap between items as needed */
+  /* max-width: 1000px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: scroll;
+}
+
+.cards-list-subcontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}

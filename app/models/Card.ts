@@ -1,6 +1,7 @@
 export interface IStats {
   damage: number;
   cost: number;
+  equipment: number;
 }
 
 export enum ECardType {
@@ -29,8 +30,8 @@ export interface ICard {
   description: string;
   effect: string;
   front?: string;
+  season?: string;
   stats: IStats;
-  type: ECardType;
+  type: string;
   actions: ICardActions;
-  equipmentSlots: number;
 }

@@ -1,0 +1,11 @@
+#main-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#main-menu-container > *:not(:last-child) {
+  margin-bottom: 10px;
+}

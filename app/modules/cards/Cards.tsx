@@ -1,12 +1,14 @@
-import Card from '../../components/Card/Card';
-import Navigation from '../../components/Navigation/Navigation';
+import "./Cards.css";
+
+import LoadingOverlay from "../../components/LoadingOverlay/LoadingOverlay";
+import Navigation from "../../components/Navigation/Navigation";
 
 export default function Cards() {
   return (
-    <div>
+    <div id="cards-container">
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Navigation />
-      <Card />
+      <LoadingOverlay fullHeight />
     </div>
   );
 }

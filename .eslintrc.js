@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 module.exports = {
   extends: 'erb',
   plugins: ['@typescript-eslint'],
@@ -15,6 +16,13 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     'no-use-before-define': ['error', { variables: false }],
     'react/require-default-props': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: false,
+        parser: 'flow',
+      },
+    ],
   },
   parserOptions: {
     ecmaVersion: 2020,

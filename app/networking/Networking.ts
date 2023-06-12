@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import objToQueryString from "../utils";
+import {objToQueryString} from "../utils";
 import { NetworkingConfig, ObjectType, RequestMethod } from "./models";
 
 export default class RequestData {

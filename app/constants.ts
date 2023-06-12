@@ -34,6 +34,11 @@ const CardDefaults = {
   front: CardFront,
 };
 
+export interface NavigationMenuOption {
+  label: string;
+  onClick?: () => void;
+}
+
 interface NavigationProps {
   title?: string;
   hideBackButton?: boolean;

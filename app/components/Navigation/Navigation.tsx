@@ -1,9 +1,18 @@
 import { useNavigate } from "react-router-dom";
 
 import "./Navigation.css";
-import { Icons, RouteNavigationOptions } from "../../constants";
+import {
+  Icons,
+  NavigationMenuOption,
+  RouteNavigationOptions,
+} from "../../constants";
+import { Button, IconButton } from "../Buttons";
 
-export default function Navigation() {
+interface Props {
+  menuOptions?: NavigationMenuOption[];
+}
+
+export default function Navigation({ menuOptions }: Props) {
   const navigate = useNavigate();
 
   const { title, hideBackButton } =
@@ -12,15 +21,15 @@ export default function Navigation() {
   return (
     <div id="navigation-container">
       {!hideBackButton && (
-        <button
-          className="back-button"
-          type="button"
-          onClick={() => navigate(-1)}
-        >
-          <img src={Icons.back} alt="Ir atrás" />
-        </button>
+        <IconButton icon={Icons.back} onClick={() => navigate(-1)} />
       )}
       <span className="navigation-title">{title}</span>
+      <div className="navigation-menu-options-container">
+        {menuOptions &&
+          menuOptions.map((option) => (
+            <Button label={option.label} onClick={option.onClick} />
+          ))}
+      </div>
     </div>
   );
 }

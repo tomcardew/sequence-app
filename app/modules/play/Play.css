@@ -1,0 +1,17 @@
+#play-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#play-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#play-content > *:not(:last-child) {
+  margin-bottom: 10px;
+}

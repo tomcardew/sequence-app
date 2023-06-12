@@ -1,20 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import './MainMenu.css';
-import Button from '../../components/Button/Button';
+import "./MainMenu.css";
+import { Button } from "../../components/Buttons";
 
 const routes = [
   {
-    name: 'Jugar',
-    route: '/play',
+    name: "Jugar",
+    route: "/play",
   },
   {
-    name: 'Decks',
-    route: '/decks',
+    name: "Decks",
+    route: "/decks",
   },
   {
-    name: 'Todas las Cartas',
-    route: '/cards',
+    name: "Todas las Cartas",
+    route: "/cards",
   },
 ];
 
@@ -28,7 +28,11 @@ function MainMenu() {
   return (
     <div id="main-menu-container">
       {routes.map((route) => (
-        <Button label={route.name} onClick={() => goToScreen(route.route)} />
+        <Button
+          label={route.name}
+          style={{ width: 200 }}
+          onClick={() => goToScreen(route.route)}
+        />
       ))}
     </div>
   );

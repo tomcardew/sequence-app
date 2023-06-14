@@ -1,9 +1,12 @@
+import { observer } from "mobx-react-lite";
 import Navigation from "../../components/Navigation/Navigation";
 import CardSidePanel from "../../components/SidePanels/CardSidePanel/CardSidePanel";
 import "./Match.css";
 import MatchField from "./subcomponents/MatchField/MatchField";
+import useStore from "../../use-store";
 
-export default function Match() {
+const Match = observer(() => {
+  const { myGame, opponentsGame } = useStore();
   return (
     <div id="match-container">
       <Navigation />
@@ -16,21 +19,8 @@ export default function Match() {
       </div>
       <div id="field-content-container">
         <div id="match-content" className="rotation">
-          <MatchField
-            inverted
-            payload={{
-              deck: [],
-              discarded: [],
-              field: { action: [], upgrade: [] },
-            }}
-          />
-          <MatchField
-            payload={{
-              deck: [],
-              discarded: [],
-              field: { action: [], upgrade: [] },
-            }}
-          />
+          <MatchField inverted payload={opponentsGame.state} />
+          <MatchField payload={myGame.state} />
         </div>
         <div id="match-hand-content" />
       </div>
@@ -39,4 +29,6 @@ export default function Match() {
       </div>
     </div>
   );
-}
+});
+
+export default Match;

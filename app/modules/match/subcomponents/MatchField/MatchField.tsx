@@ -1,27 +1,8 @@
 import Card from "../../../../components/Card/Card";
 import CardLike from "../../../../components/CardLike/CardLike";
 import { Icons } from "../../../../constants";
-import { ICard } from "../../../../models/Card";
+import { IMatchFieldCard, IMatchFieldPayload } from "../../../../models/Match";
 import "./MatchField.css";
-
-export interface IMatchFieldCardProps {
-  selected?: boolean;
-  targeted?: boolean;
-}
-
-export interface IMatchFieldCard {
-  card: ICard; // card template
-  properties?: IMatchFieldCardProps;
-}
-
-export interface IMatchFieldPayload {
-  deck: IMatchFieldCard[];
-  discarded: IMatchFieldCard[];
-  field: {
-    action?: IMatchFieldCard[],
-    upgrade?: IMatchFieldCard[],
-  };
-}
 
 interface Props {
   payload?: IMatchFieldPayload;
@@ -146,7 +127,7 @@ export default function MatchField({ payload, inverted }: Props) {
         </div>
         <CardLike style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
           {discarded && discarded.length > 0 && (
-            <Card card={discarded && discarded[0].card} />
+            <Card card={discarded && discarded[0]} />
           )}
         </CardLike>
       </div>

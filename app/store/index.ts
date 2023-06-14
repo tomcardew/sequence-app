@@ -6,7 +6,8 @@ import GameStore from "./GameStore";
 const rootStoreContext = createContext({
   cards: new CardsStore(),
   decks: new DecksStore(),
-  game: new GameStore(),
+  myGame: new GameStore(),
+  opponentsGame: new GameStore(),
 });
 
 export default rootStoreContext;

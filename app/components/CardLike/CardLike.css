@@ -1,0 +1,29 @@
+#card-like-container {
+  position: relative;
+  width: 136px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgb(255, 255, 255, 0.75);
+}
+
+#card-like-container::before {
+  content: '';
+  display: block;
+  padding-top: 140%;
+}
+
+.card-like-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: black;
+}
+
+.card-like-content #card-container {
+  transform: scale(0.98);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}

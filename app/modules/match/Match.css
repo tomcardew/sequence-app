@@ -1,0 +1,74 @@
+#match-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#match-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#field-content-container {
+  perspective: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#match-content #match-field-container {
+  margin: 20px;
+}
+
+.rotation {
+  transform: rotateX(33deg);
+  transform-origin: center center -300px;
+  padding: 20px;
+}
+
+/* ------ BG ------- */
+
+#match-bg-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+#match-bg-container .match-bg-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: opacity(30%);
+}
+
+/* ------ HAND ------- */
+
+#match-hand-content {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#match-hand-content :not(:first-child) {
+  margin-left: 10px;
+}
+
+/* ------ SIDE PANEL ------- */
+
+#match-side-content {
+  background-color: white;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}

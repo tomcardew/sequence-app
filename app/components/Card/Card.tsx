@@ -29,13 +29,13 @@ export default function Card({ card, onHover }: ICardProps) {
 
   return (
     <div id="card-container" onMouseEnter={onHover}>
-      {card && (
-        <div id="card-content">
-          <img
-            className="card-content-front"
-            src={card.front ?? CardDefaults.front}
-            alt=""
-          />
+      <div id="card-content">
+        <img
+          className="card-content-front"
+          src={card?.front ?? CardDefaults.front}
+          alt=""
+        />
+        {card && (
           <div id="card-data-container">
             <div className="card-data-name">{card.name}</div>
             <div className="card-data-stats">
@@ -44,11 +44,13 @@ export default function Card({ card, onHover }: ICardProps) {
               <Stat icon={Icons.slots} label={card.stats.equipment} />
             </div>
           </div>
+        )}
+        {card && (
           <div className="card-data-type">
             <img src={cardIcon()} alt="" />
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

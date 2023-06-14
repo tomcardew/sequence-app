@@ -42,6 +42,7 @@ export interface NavigationMenuOption {
 interface NavigationProps {
   title?: string;
   hideBackButton?: boolean;
+  invisible?: boolean;
 }
 
 const RouteNavigationOptions: { [key: string]: NavigationProps } = {
@@ -60,6 +61,10 @@ const RouteNavigationOptions: { [key: string]: NavigationProps } = {
   "/decks": {
     hideBackButton: false,
     title: "Todos tus decks",
+  },
+  "/play/match": {
+    hideBackButton: false,
+    invisible: true,
   },
 };
 

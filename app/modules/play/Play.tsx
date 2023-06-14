@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./Play.css";
 import { Button } from "../../components/Buttons";
 import Navigation from "../../components/Navigation/Navigation";
-import PlayField from "./subcomponents/PlayField/PlayField";
 
 const routes = [
   {
@@ -12,7 +11,7 @@ const routes = [
   },
   {
     name: "Crear",
-    route: "/play/create",
+    route: "/play/match",
   },
   {
     name: "Configuración",
@@ -34,9 +33,6 @@ export default function Play() {
             onClick={() => navigate(route.route)}
           />
         ))}
-      </div>
-      <div>
-        <PlayField />
       </div>
     </div>
   );

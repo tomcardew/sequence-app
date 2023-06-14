@@ -15,11 +15,14 @@ interface Props {
 export default function Navigation({ menuOptions }: Props) {
   const navigate = useNavigate();
 
-  const { title, hideBackButton } =
+  const { title, hideBackButton, invisible } =
     RouteNavigationOptions[window.location.pathname];
 
   return (
-    <div id="navigation-container">
+    <div
+      id="navigation-container"
+      className={invisible ? "navigation-invisible" : undefined}
+    >
       {!hideBackButton && (
         <IconButton icon={Icons.back} onClick={() => navigate(-1)} />
       )}

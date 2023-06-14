@@ -17,3 +17,12 @@
   font-weight: 700;
   font-size: 18px;
 }
+
+.navigation-invisible {
+  height: 0px !important;
+}
+
+.navigation-invisible .icon-button {
+  margin-top: 40px;
+  z-index: 100;
+}

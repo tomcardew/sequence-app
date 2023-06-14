@@ -4,6 +4,7 @@ import "./App.css";
 import Play from "../../app/modules/play/Play";
 import Cards from "../../app/modules/cards/Cards";
 import Decks from "../../app/modules/deck/Decks";
+import Match from "../../app/modules/match/Match";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/cards",
     element: <Cards />,
+  },
+  {
+    path: "/play/match",
+    element: <Match />,
   },
 ]);
 

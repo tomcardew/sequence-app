@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { IDeck } from "../models/Deck";
+import { IDeck } from "sequence-core";
 import DecksServices from "../services/DecksServices";
 
 class DecksStore {

@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { ICard } from "../models/Card";
+import { ICard } from "sequence-core";
 import CardsServices from "../services/CardsServices";
 
 class CardsStore {

@@ -1,4 +1,4 @@
-import { ICard } from "../../../models/Card";
+import { ICard } from "sequence-core";
 import Card from "../../Card/Card";
 import "./CardSidePanel.css";
 

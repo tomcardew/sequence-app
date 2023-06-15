@@ -1,5 +1,4 @@
-import { ECardType } from "./models/Card";
-import { IDeck } from "./models/Deck";
+import { IDeck, ECardType } from "sequence-core";
 import { ObjectType } from "./networking/models";
 
 function objToQueryString(obj: ObjectType) {

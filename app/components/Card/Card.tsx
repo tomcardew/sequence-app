@@ -1,5 +1,5 @@
+import { ICard, ECardType } from "sequence-core";
 import { CardDefaults, Icons } from "../../constants";
-import { ECardType, ICard } from "../../models/Card";
 import "./Card.css";
 import Stat from "./Subcomponents/Stat/Stat";
 

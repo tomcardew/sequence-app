@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ICard } from "../../models/Card";
+import { ICard } from "sequence-core";
 import Card from "../Card/Card";
 import CardSidePanel from "../SidePanels/CardSidePanel/CardSidePanel";
 import "./CardsList.css";

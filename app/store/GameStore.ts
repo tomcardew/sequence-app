@@ -1,6 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { ICard } from "../models/Card";
-import { IMatchFieldCard, IMatchFieldPayload } from "../models/Match";
+import { ICard, IMatchFieldCard, IMatchFieldPayload } from "sequence-core";
 
 type ICardList = ICard[];
 
